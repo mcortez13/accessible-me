@@ -20,6 +20,26 @@ h6 {
   padding: 0 1rem;
 }
 
+.skip-links {
+  margin: 0;
+  padding:0;
+  list-style: none;
+}
+
+.skip-links a, a:visited {
+  position: absolute;
+  text-decoration: none;
+  color: #e8e5d9;
+  top: -3em;
+}
+
+.skip-links a:focus {
+  top: 0;
+  position: fixed;
+  color: #e8e34f;
+  background-color: black;
+}
+
 img {
   width: 100%;
 }
