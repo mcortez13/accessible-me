@@ -13,66 +13,67 @@
 </head>
 
 <body>
-  
-  <div class="container-skip">
+
+  <div role="navigation" class="container-skip">
     <ul class="skip-links">
-      <li><a href="#navigation">Skip to nav bar</a></li>
-      <li><a href="#maincontent">Skip to main content</a></li>
-      <li><a href="#contactus">Skip to contact form</a></li>
+      <li><a href="#navigation" aria-label="Skip to the main nav bar">Skip to nav bar</a></li>
+      <li><a href="#maincontent" aria-label="Skip to where the main content starts">Skip to main content</a></li>
+      <li><a href="#contactus" aria-label="Skip to the contact form section">Skip to contact form</a></li>
     </ul>
   </div>
 
   <div class="container">
-    <header class="site-header">
+    <header role="banner" class="site-header">
       <h1>Jam Box Studios</h1>
-      <nav class="main-nav" id="navigation">
+      <nav role="navigation" class="main-nav" id="navigation">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Reservation</a></li>
-          <li><a href="#">Studio</a></li>
+          <li><a href="#" aria-label="Goes to homepage">Home</a></li>
+          <li><a href="#" aria-label="Goes to available product list">Products</a></li>
+          <li><a href="#" aria-label="Goes to reservation form">Reservation</a></li>
+          <li><a href="#" aria-label="Goes to page with more information about the studio">Studio</a></li>
         </ul>
       </nav>
-      <img src="https://placekitten.com/1200/900" class="banner">
+      <img src="https://placekitten.com/1200/900" class="banner" alt="image of a cat" aria-details="maincontent" itemprop="image">
     </header>
-    <main class="main-content" id="maincontent">
+    <main role="main" class="main-content" id="maincontent">
       <h1>Welcome to Jam Box</h1>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
       <br>
-      <section class="owner">
+      <section role="article" class="owner">
         <h1>Meet the owner</h1>
-        <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
+        <ul itemscope itemtype="https://schema.org/Person">
+          <li>Name: <span itemprop="givenName"><b>John Doe</b></span></li>
+          <li>Title: <span itemprop="jobTitle"><b>CEO</b></span></li>
+          <li>Email: <span itemprop="email"><b>johnjoe@jambox.ca</b></span></li>
+          <li>Phone: <span itemprop="telephone"><b>613-000-0000</b></span></li>
         </ul>
         <br>
         <h1>Address</h1>
-        <p>
-          Jambox Studios
-          123 Guitar Road,
-          Musicville, Danceistan
-          B3T 0L0
+        <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          Jambox Studios<br>
+          <span itemprop="streetAddress">123 Guitar Road,</span>
+          <span itemprop="addressLocality">Musicville,</span>
+          <span itemprop="addressCountry">Danceistan</span>
+          <span itemprop="postalCode">B3T 0L0</span>
         </p>
       </section>
       <br>
-      <section class="contact-section" id="contactus">
+      <section role="article" class="contact-section" id="contactus">
         <h1>Contact Us</h1>
-        <form action="thanks.html">
+        <form role="form" action="thanks.html">
           <label>Information</label>
           <input type="text" placeholder="Full Name">
           <input type="text" placeholder="Email">
           <input type="text" placeholder="Subject">
           <label>Message</label>
           <textarea placeholder="Enter your message here"></textarea>
-          <button type="submit">Send</button>
+          <button role="button" type="submit" aria-label="Sends the form for revision">Send</button>
         </form>
       </section>
     </main>
     <br><br>
-    <footer class="site-footer">
+    <footer role="contentinfo" class="site-footer">
       &copy; 2021 Jam Box Studios
     </footer>
   </div>
